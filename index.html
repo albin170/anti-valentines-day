@@ -2,52 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentine.exe has stopped working</title>
+  <title>Valentine.exe Destroyed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div id="confetti"></div>
+
 <header>
   <h1>💔 Valentine.exe</h1>
-  <p>Status: <span id="status">CRASHED</span></p>
-  <button onclick="crash()">💥 CRASH AGAIN</button>
+  <p>Status: <span class="crash">PERMANENTLY SINGLE</span></p>
+  <button onclick="crash()">💥 DESTROY AGAIN</button>
 </header>
 
 <section class="card">
-  <h2>📉 Relationship Simulator</h2>
-  <button onclick="simulate()">Simulate Valentine</button>
-  <p id="simResult"></p>
+  <h2>🧠 Are You Single or Just Smart?</h2>
+  <button onclick="quiz()">Check IQ</button>
+  <p id="quizResult"></p>
 </section>
 
 <section class="card red">
-  <h2>💸 Valentine Bill Generator</h2>
-  <button onclick="bill()">Generate Bill</button>
-  <p id="billResult"></p>
+  <h2>📊 How Single Are You?</h2>
+  <button onclick="singleMeter()">Measure</button>
+  <p id="singleResult"></p>
 </section>
 
 <section class="card">
-  <h2>😐 Mood Detector</h2>
-  <button onclick="mood()">Check Mood</button>
-  <p id="moodResult"></p>
+  <h2>📱 Mobile-Only Truth</h2>
+  <button onclick="mobileJoke()">Reveal</button>
+  <p id="mobileResult"></p>
 </section>
 
 <section class="card red">
-  <h2>🔥 Anger Button</h2>
-  <button class="rage" onclick="rage()">CLICK WHEN YOU SEE COUPLES</button>
+  <h2>🔥 Rage Button</h2>
+  <button class="rage" onclick="rage()">I SAW A COUPLE</button>
   <p>Anger Level: <span id="rageCount">0</span></p>
 </section>
 
 <section class="card">
-  <h2>🤡 Truth Generator</h2>
-  <button onclick="truth()">Reveal Truth</button>
-  <p id="truthResult"></p>
+  <h2>🧾 Fake Breakup Receipt</h2>
+  <button onclick="receipt()">Generate Receipt</button>
+  <pre id="receiptBox"></pre>
 </section>
 
-<footer>
-  <p>Congratulations 🎉 You saved money, time, and mental peace.</p>
-</footer>
+<section class="card red">
+  <h2>📸 Share Status Generator</h2>
+  <button onclick="share()">Generate Share Text</button>
+  <p id="shareText"></p>
+</section>
 
-<script src="script.js"></script>
-</body>
-</html>
+<fo
+
