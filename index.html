@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine.exe has stopped working</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>💔 Valentine.exe</h1>
+  <p>Status: <span id="status">CRASHED</span></p>
+  <button onclick="crash()">💥 CRASH AGAIN</button>
+</header>
+
+<section class="card">
+  <h2>📉 Relationship Simulator</h2>
+  <button onclick="simulate()">Simulate Valentine</button>
+  <p id="simResult"></p>
+</section>
+
+<section class="card red">
+  <h2>💸 Valentine Bill Generator</h2>
+  <button onclick="bill()">Generate Bill</button>
+  <p id="billResult"></p>
+</section>
+
+<section class="card">
+  <h2>😐 Mood Detector</h2>
+  <button onclick="mood()">Check Mood</button>
+  <p id="moodResult"></p>
+</section>
+
+<section class="card red">
+  <h2>🔥 Anger Button</h2>
+  <button class="rage" onclick="rage()">CLICK WHEN YOU SEE COUPLES</button>
+  <p>Anger Level: <span id="rageCount">0</span></p>
+</section>
+
+<section class="card">
+  <h2>🤡 Truth Generator</h2>
+  <button onclick="truth()">Reveal Truth</button>
+  <p id="truthResult"></p>
+</section>
+
+<footer>
+  <p>Congratulations 🎉 You saved money, time, and mental peace.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
