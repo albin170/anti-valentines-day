@@ -1,90 +1,77 @@
 let rageLevel = 0;
 
-function sound(id) {
-  document.getElementById(id).play();
-}
-
 function crash() {
-  sound("boom");
   document.body.style.filter = "hue-rotate(180deg)";
   alert("💥 Valentine.exe destroyed successfully");
 }
 
 function quiz() {
-  sound("pop");
   const answers = [
     "Single because standards 📈",
-    "Emotionally unavailable by choice 😎",
     "Too smart for drama 🧠",
+    "Emotionally unavailable by choice 😎",
     "Avoiding character development"
   ];
-  quizResult.innerText =
+  document.getElementById("quizResult").innerText =
     answers[Math.floor(Math.random() * answers.length)];
 }
 
 function singleMeter() {
-  sound("pop");
   const percent = Math.floor(Math.random() * 40) + 60;
-  singleResult.innerText =
+  document.getElementById("singleResult").innerText =
     `You are ${percent}% single. Remaining % is self-respect.`;
 }
 
 function mobileJoke() {
-  sound("pop");
-  if (window.innerWidth > 768) {
-    mobileResult.innerText =
-      "❌ Please open on phone for emotional damage.";
-  } else {
-    mobileResult.innerText =
-      "📱 Couples arguing. You scrolling peacefully.";
-  }
+  const msg =
+    window.innerWidth > 768
+      ? "❌ Open on phone for maximum emotional damage."
+      : "📱 Couples arguing. You scrolling peacefully.";
+  document.getElementById("mobileResult").innerText = msg;
 }
 
 function rage() {
   rageLevel++;
-  rageCount.innerText = rageLevel;
-  sound("pop");
+  document.getElementById("rageCount").innerText = rageLevel;
 
   if (rageLevel === 10) {
     confetti();
-    alert("🧨 MAX RAGE ACHIEVED. CONFETTI UNLOCKED.");
+    alert("🧨 MAX RAGE ACHIEVED");
   }
 }
 
 function receipt() {
-  sound("pop");
   const id = Math.floor(Math.random() * 99999);
-  receiptBox.textContent = `
+  document.getElementById("receiptBox").textContent = `
 BREAKUP RECEIPT
----------------
+--------------
 Order ID: #${id}
-Item: Emotional Peace
-Price: ₹0
-Tax: Tears Saved
+Item: Mental Peace
+Cost: ₹0
+Tax: Saved Tears
 Status: REFUNDED
 
-Thank you for not dating.
+Thank you for staying single.
 `;
 }
 
 function share() {
-  sound("pop");
   const lines = [
-    "Valentine’s Day cancelled due to self-respect.",
+    "Valentine cancelled due to self-respect.",
     "Still single. Still undefeated.",
     "Love is temporary. Sleep is permanent.",
     "Avoided relationship. Achievement unlocked."
   ];
-  shareText.innerText =
+  document.getElementById("shareText").innerText =
     lines[Math.floor(Math.random() * lines.length)];
 }
 
 function confetti() {
-  for (let i = 0; i < 50; i++) {
+  const box = document.getElementById("confetti");
+  for (let i = 0; i < 40; i++) {
     const c = document.createElement("span");
     c.style.left = Math.random() * 100 + "vw";
-    c.style.top = "-10px";
-    document.getElementById("confetti").appendChild(c);
+    box.appendChild(c);
     setTimeout(() => c.remove(), 2000);
   }
 }
