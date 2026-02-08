@@ -1,81 +1,69 @@
-* {
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
 body {
-  margin: 0;
-  background: linear-gradient(135deg, #111, #000);
-  color: white;
+  background: radial-gradient(circle, #0f0f0f, #000);
+  color: #ff4d6d;
+  font-family: 'Comic Sans MS', cursive;
   text-align: center;
-}
-
-header {
-  padding: 50px 20px;
+  padding: 20px;
 }
 
 h1 {
   font-size: 3rem;
-  color: crimson;
+  text-shadow: 0 0 15px red;
 }
 
-.crash {
-  color: lime;
-  font-weight: bold;
+.subtitle {
+  color: #aaa;
 }
 
 button {
-  padding: 12px 24px;
-  margin: 10px;
-  border-radius: 25px;
-  border: none;
-  font-size: 1rem;
+  padding: 10px 20px;
+  background: black;
+  color: #ff4d6d;
+  border: 2px solid #ff4d6d;
+  border-radius: 10px;
   cursor: pointer;
-  background: crimson;
-  color: white;
+  margin: 10px;
 }
 
 button:hover {
-  transform: scale(1.08);
-}
-
-.card {
-  background: rgba(255,255,255,0.08);
-  margin: 20px auto;
-  padding: 25px;
-  border-radius: 20px;
-  width: min(90%, 420px);
-}
-
-.card.red {
-  border: 2px dashed crimson;
-}
-
-.rage {
-  background: orange;
+  background: #ff4d6d;
   color: black;
 }
 
-pre {
-  background: black;
-  padding: 15px;
-  border-radius: 10px;
-  text-align: left;
+.card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 20px #ff4d6d44;
 }
 
-#confetti span {
+input {
+  padding: 10px;
+  width: 70%;
+  border-radius: 10px;
+  border: none;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Heart rain */
+.heart {
   position: fixed;
-  width: 10px;
-  height: 10px;
-  background: crimson;
   top: -10px;
-  animation: fall 2s linear forwards;
+  font-size: 24px;
+  animation: fall 4s linear infinite;
 }
 
 @keyframes fall {
   to {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
+    transform: translateY(110vh);
   }
 }
 
