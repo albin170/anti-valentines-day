@@ -1,43 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Valentine Destroyed</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body{margin:0;background:#000;color:#fff;text-align:center;font-family:Arial}
-h1{color:crimson;font-size:3rem}
-button{padding:12px 25px;border:none;border-radius:20px;background:crimson;color:white;font-size:1rem;margin:10px}
-.card{background:#111;padding:20px;margin:20px auto;border-radius:20px;width:90%;max-width:400px}
-.rage{background:orange;color:black}
-</style>
+  <meta charset="UTF-8">
+  <title>Anti-Valentine 💔</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>💔 Valentine.exe</h1>
-<button onclick="alert('💥 DESTROYED')">Destroy Valentine</button>
+<h1>💔 ANTI-VALENTINE ZONE 💔</h1>
+<p class="subtitle">Love is overrated. Wi-Fi is forever.</p>
 
-<div class="card">
-  <button onclick="document.getElementById('t').innerText='Still single. Still winning 😎'">
-    Reveal Truth
-  </button>
-  <p id="t"></p>
-</div>
+<button onclick="toggleHearts()">💥 Break the Hearts</button>
+<button onclick="playMusic()">🎶 Play Emotional Damage</button>
 
-<div class="card">
-  <button class="rage" onclick="r()">I SAW A COUPLE</button>
-  <p>Rage: <span id="r">0</span></p>
-</div>
+<section class="card">
+  <h2>🔥 Rage Click Counter</h2>
+  <button onclick="rage()">CLICK WHEN ANGRY</button>
+  <p>Rage level: <span id="rageCount">0</span></p>
+</section>
 
-<script>
-let x=0;
-function r(){
-  x++;
-  document.getElementById('r').innerText=x;
-  if(x===5) alert('🔥 Calm down. Eat snacks.');
-}
-</script>
+<section class="card">
+  <h2>📊 How Single Are You?</h2>
+  <button onclick="singleTest()">Check Now</button>
+  <p id="singleResult"></p>
+</section>
 
+<section class="card">
+  <h2>🤖 Anti-Valentine Bot</h2>
+  <input id="userInput" placeholder="Say something romantic 🤡">
+  <button onclick="chat()">Send</button>
+  <p id="botReply"></p>
+</section>
+
+<section class="card">
+  <h2>💔 Breakup Letter Generator</h2>
+  <button onclick="breakup()">Generate Letter</button>
+  <p id="letter"></p>
+</section>
+
+<section class="card">
+  <h2>😂 Random Anti-Love Joke</h2>
+  <button onclick="joke()">Make Me Laugh</button>
+  <p id="jokeText"></p>
+</section>
+
+<footer>
+  Made with 💀 instead of ❤️
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
-
